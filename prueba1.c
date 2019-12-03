@@ -24,11 +24,12 @@ int main()
 int sum(int, ...);
 
 int main () {
-   printf("Sum of 15 and 56 = %d\n",  sum(1, 15, 56) );
+   printf("%d\n",  sum(4, 15, 56, 64, 30) );
    return 0;
 }
 
-int sum(int num_args, ...) {
+int sum(int num_args, ...) 
+{
    int val = 0;
    va_list ap;
    int i;
