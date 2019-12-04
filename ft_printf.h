@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_flags.c                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 18:09:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/04 19:36:45 by javrodri         ###   ########.fr       */
+/*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/04 19:24:29 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef HEADER_H
+# define HEADER_H
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-void	initialize_flags(t_struct *flags)
-{
-	flags->i = 0;
-	flags->j = 0;
-	flags->len = 0;
-	flags->aux = 0;
-	flags->count = 0;
-	flags->flag_minus = 0;
-	flags->flag_zero = 0;
-	flags->flag_width = 0;
-	flags->width = 0;
-	flags->flag_precision = 0;
-	flags->precision = 0;
-	flags->flag_integer_negative = 0;		
-}
 
-char	check_flags(const char *format, t_struct *flags)
+typedef struct	s_struct
 {
-	
-}
+	va_list		ap;
+	int			i;
+	int			len;
+	int			flag_minus;
+	int			flag_zero;
+	int			flag_width;
+	int			width;
+	int			aux;
+	int			precision;
+	int			flag_precision;
+	int			j;
+	int			flag_integer_negative;
+	int			count;
+}				t_struct;
+
