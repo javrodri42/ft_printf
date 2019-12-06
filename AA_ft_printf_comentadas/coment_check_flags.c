@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_flags.c                                      :+:      :+:    :+:   */
+/*   coment_check_flags.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 18:09:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/05 09:37:29 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/05 10:10:32 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,21 @@ void	initialize_flags(t_struct *flags)
 	flags->flag_integer_negative = 0;		
 }
 
+/*
+** Esta funcion solo va a comprobar la existenciia de flags, no va a comrpobar el
+** tipo de flags o el tipo de variable que vamos a imrpimir.
+*/
+
 void	check_flags(const char *format, t_struct *flags)
 {
-	while (format[flags->i])					
+	while (format[flags->i])					//i va avanzando por la cadena *format
 	{
-		if (format[flags->i] == '%')			
+		if (format[flags->i] == '%')			//si encuentra un %
 		{
 			flags->i++;
-			if (ft_strchr("*.-0123456789", format[flags->i]))		
-				parse_flags(format, flags);							
-			if (ft_strchr("cspdiuxX%", format[flags->i]))			
+			if (ft_strchr("*.-0123456789", format[flags->i]))		//si localiza uno de los flags
+				parse_flags(format, flags);							//comprueba que flags debe activar
+			if (ft_strchr("cspdiuxX%", format[flags->i]))			//comprueba si existe el tipo de dato que vamos a imprimir
 				check_type(format, flags);
 		}
 		else
@@ -49,9 +54,13 @@ void	check_flags(const char *format, t_struct *flags)
 	}
 }
 
+/*
+**Funcion que va a comprobar los distintos flags
+*/
+
 void	parse_flags(const char *format, t_struct *flags)
 {
-	minus_zero_flag(format, flags);
-	width_flag(format, flags);
-	precision_flags(format, flags);
+	minus_zero_flag(format, flags); //El flag - y 0 pueden interferir mutuamente, por ello los ponemos en la misma funcion, para facilitar.
+	width_flag(format, flags);		//Flag width.  Tamaño del ancho del campo donde se imprimirá el valor. 	
+	precision_flags(format, flags); //Precision.  Tamaño de la parte decimal para números reales. Número de caracteres a imprimir para cadenas de texto  
 }

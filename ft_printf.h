@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/04 19:24:29 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/05 17:06:41 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-
+# include <stdarg.h>
 
 typedef struct	s_struct
 {
@@ -34,3 +34,10 @@ typedef struct	s_struct
 	int			count;
 }				t_struct;
 
+int		ft_printf(const char *format, ...);
+void	check_flags(const char *format, t_struct *flags);
+void	parse_flags(const char *format, t_struct *flags);
+void	minus_zero_flag(const char *format, t_struct *flags);
+void	ft_width(const char *format, t_struct *flags);
+
+#endif
