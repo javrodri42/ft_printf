@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "printf.h"
 
 int main()
 {
 	int a;
 	//printf("%2$s, %1$s", "jdsfklsdfj", "aaaaaa");
 	//printf("\n\n\n");
-	//printf("%05d", 15);
-	//printf("%*d", 10, 0);
+	printf("%05d", 15);
+	printf("%*d", 10, 0);
+	printf("\n\n\n");
+	printf("%05d", 345);
+	printf("\n\n\n");
+	//printf("%2s", "me voy a cagar en la puta");
 	//printf("\n\n\n");
-	//printf("%05d", 345);
-	/*printf("\n\n\n");
-	printf("%2s", "me voy a cagar en la puta");
-	printf("\n\n\n");
-	printf("%.2s", "me voy a cagar en la puta");
-	printf("\n\n\n");
+	//printf("%.2s", "me voy a cagar en la puta");
+	//printf("\n\n\n");
 	printf("%9d", 10);
 	printf("\n\n\n");
-	printf("%*d", 5, 10);*/
-	//printf("\n\n\n");
-	//printf("%5d", 5);
+	printf("%*d", 5, 10);
+	printf("\n\n\n");
+	printf("%5d", 5);
 	//printf("printf *.*i (8, 8, -234):     [%*.*i]\n", 8, 8, -234);
 	//printf("%i", 5);
 	//printf("printf #*.*x (8, 8, 234):     [%#*.*x]\n", 8, 8, 234);
@@ -75,7 +74,7 @@ int main()
     //printf("\n");
     //printf("%0500.d %3.1d", 234, 123);
     //ft_printf("%-*d %3.1d", -5, 0, 123);
-    //printf("\n");
+    printf("\n");
     //printf("%-*d %3.1d", -5, 0, 123);
 	//ft_printf("%*.*i", 042, 013, 1111);
 	/*ft_printf("La  putama:%8.3d", -8473);
@@ -107,5 +106,6 @@ int main()
 	printf("%1.0i", 0);
 	printf("\n");*/
 	printf("%*s" , 20, "fucking");
+	printf("\n");
 	return (0);
 }
