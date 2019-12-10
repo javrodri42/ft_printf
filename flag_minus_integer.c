@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 09:33:26 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 11:09:20 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 17:32:56 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	flag_minus_integer(t_struct *flags, int integer)
 	if (flags->flag_precision && flags->precision > flags->count)
 	{
 		if ( flags->flag_integer_negative)
-			flags->precision *= 1;
+			flags->precision += 1;
 		while (flags->j < (flags->width - flags->precision))
 		{
 			write(1," ", 1);

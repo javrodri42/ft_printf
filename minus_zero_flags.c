@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 11:41:20 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/09 20:46:15 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 17:33:25 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,5 @@ void	minus_zero_flag(const char *format, t_struct *flags)
 		if (flags->flag_minus == '1')
 			flags->flag_zero = 0;
 		flags->i++;
-		printf("flag5");
 	}
-	printf("flag6");
-	printf("%i", flags->i);
-	printf("%c", format[flags->i]);
 }

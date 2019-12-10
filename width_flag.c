@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 12:56:56 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/08 16:39:24 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 18:23:25 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	width_flag(const char *format, t_struct *flags)
 		if (format[flags->i] == '*')
 		{
 			flags->aux = va_arg(flags->ap, int);							
-			flags->flag_minus = flags->aux < 0 ? -(flags->aux) : flags->aux;
+			flags->flag_minus = flags->aux < 0 ? 1 : flags->flag_minus;
 			flags->width = flags->aux < 0 ? -(flags->aux) : flags->aux;
 			flags->flag_width = 1;
 			flags->i++;

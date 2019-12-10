@@ -1,111 +1,53 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/10 18:18:27 by javrodri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include <stdio.h>
 #include <unistd.h>
+#include "printf.h"
+
+/*int ft_printf(const char *str, ...)
+{
+    int i;
+
+    i = 0;
+    while (str[i] != '%')
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
+    return 0;
+}*/
+
+//int ft_printf(const char *str, ...);
 
 int main()
 {
-	int a;
-	//printf("%2$s, %1$s", "jdsfklsdfj", "aaaaaa");
-	//printf("\n\n\n");
-	printf("%05d", 15);
-	printf("%*d", 10, 0);
-	printf("\n\n\n");
-	printf("%05d", 345);
-	printf("\n\n\n");
-	//printf("%2s", "me voy a cagar en la puta");
-	//printf("\n\n\n");
-	//printf("%.2s", "me voy a cagar en la puta");
-	//printf("\n\n\n");
-	printf("%9d", 10);
-	printf("\n\n\n");
-	printf("%*d", 5, 10);
-	printf("\n\n\n");
-	printf("%5d", 5);
-	//printf("printf *.*i (8, 8, -234):     [%*.*i]\n", 8, 8, -234);
-	//printf("%i", 5);
-	//printf("printf #*.*x (8, 8, 234):     [%#*.*x]\n", 8, 8, 234);
-	//printf("%10.*s", 5, "kjjfkdskljf");
-	//printf("%*d", 345, 2);
-	//printf("\n\n\n");
-	//printf("%05d", 2);
-	//printf("%150s", "abcdefghijk");
-	//printf("%.150s", "abcdefghijk");
-	//printf("%5d", 20);
-	//printf("%.5d", 15);
-	//printf("\n\n\n");
-	//printf("%05d", 15);
-	//printf("%#s", "juanjulian");
-	//printf("\n\n\n");
-	//printf("[%0d]", 0);
-	//printf("%.3d", 40);
-	//printf("%0d", 2, 3);
-	//printf("\n\n\n");
-	//printf("", 12.30);
-	//printf("\n\n\n");
-	//printf("%0%", 90);
-	//char *s;
-	//int fd = 0;
-	//printf("%d %90d", 5, 6);
-	//printf("\n\n\n");
-	//fd = write(0, "abc" , 3);
-	//write(0, "qwerty" , 6);
-	//write(1, &fd, 3);
-	//printf("%0.d", 0);
-	//printf("\n\n\n");
-	//printf("%0d", 0);
-	//printf("\n\n\n");
-	//printf("[%0.0d]", 0);
-	//printf("\n\n\n");
-	//printf("%*.*d", 10, 3, 5);
-	//printf("\n\n\n");
-	//printf("%10*d", -3, 5);
-	//printf("[%.*d]", -29, 6);
-	//int x = -10;
-	//x *= x < 0 ? -1 : 1;
-	//printf("[%-100s]", "abcdefghijk");
-	//int count = 0;
-	//count = printf("[%-10d]", 11, -11);
-	//printf("[%d]", count);
-	//ft_printf("%d", 100);
-	//printf("%d", 100);
-	//ft_printf("%0*d", 10, 2);
-	//printf("\n-----------\n");
-	//printf("%0*d", 10, 2);
-    //ft_printf("%0500.d %3.1d", 234, 123);
-    //printf("\n");
-    //printf("%0500.d %3.1d", 234, 123);
-    //ft_printf("%-*d %3.1d", -5, 0, 123);
-    printf("\n");
-    //printf("%-*d %3.1d", -5, 0, 123);
-	//ft_printf("%*.*i", 042, 013, 1111);
-	/*ft_printf("La  putama:%8.3d", -8473);
 	printf("\n");
-	printf("putoprintf:%8.3d", -8473);
+	//printf("\n");
+    printf("Esto es una prueba %i \n", 42);
+    ft_printf("Esto es una prueba %i", 42);
+	
+	//printf("\n");
 	printf("\n");
-	ft_printf("La  putama:%10.5d", -216);
 	printf("\n");
-	printf("putoprintf:%10.5d", -216);
+	printf("%i\n", -33);
+	ft_printf("%i", -33);
+	//printf("\n");
 	printf("\n");
-	ft_printf("La  putama:%8.5d", 34);
 	printf("\n");
-	printf("putoprintf:%8.5d", 34);
+	printf("%-7i\n", 33);
+	ft_printf("%-7i", 33);
 	printf("\n");
-	ft_printf("La  putama:%-8d", -34);
-	printf("\n");
-	printf("putoprintf:%-8d", -34);
-	printf("\n");
-	ft_printf("%-5.3d", -8473);
-	printf("\n");
-	printf("%-5.3d", -8473);
-	printf("\n");
-	ft_printf("%-10.5d", -216);
-	printf("\n");
-	printf("%-10.5d", -216);
-	printf("\n");
-	ft_printf("%1.0i", 0);
-	printf("\n");
-	printf("%1.0i", 0);
-	printf("\n");*/
-	printf("%*s" , 20, "fucking");
-	printf("\n");
-	return (0);
+	//printf("%.*d",0 , 0);
+    return 0;
 }

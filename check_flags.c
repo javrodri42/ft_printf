@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 18:09:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 07:55:49 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 18:11:11 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	check_flags(const char *format, t_struct *flags)
 		{
 			write(1, &format[flags->i], 1);
 			flags->len++;
+			//printf("test");
 		}
 		flags->i++;		
 	}

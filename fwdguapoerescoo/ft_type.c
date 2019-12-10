@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_type.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fvega-tr <fvega-tr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 17:33:52 by fvega-tr          #+#    #+#             */
-/*   Updated: 2019/12/03 23:12:57 by fvega-tr         ###   ########.fr       */
+/*   Updated: 2019/12/10 18:16:46 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	ft_type(const char *s, t_struct *t)
 {
 	if (s[t->i] == 'd' || s[t->i] == 'i')
 		ft_integer(t);
-	if (s[t->i] == 's')
-		ft_string(t);
+	//if (s[t->i] == 's')
+		//ft_string(t);
 }

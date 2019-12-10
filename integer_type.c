@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:21:27 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 09:32:01 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 18:26:12 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	integer_type(t_struct *flags)
 	integer = 0;
 	integer = va_arg(flags->ap, int);
 	int_counter(flags, integer);
-	if (flags->width)
+	if (flags->flag_width)
 		flag_width_integer(flags, integer);
 	if (integer < 0)
 		integer = print_negative(flags, integer);

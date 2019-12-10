@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 09:19:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 12:23:58 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 17:34:55 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	number_print(t_struct *flags, int	integer)
 			flags->len++;
 			flags->j++;
 		}
-		//free(format);
-		//format = NULL;
+		free(format);
+		format = NULL;
 	}		
 }
