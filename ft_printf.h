@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/09 20:08:08 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 10:42:10 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,8 @@ void	integer_width_print(t_struct *flags);
 int		print_negative(t_struct *flags, int integer);
 void	flag_zero_integer(t_struct *flags);
 char	*ft_itoa(int n);
+void	flag_precision_integer(t_struct *flags);
+void	number_print(t_struct *flags, int	integer);
+void	flag_minus_integer(t_struct *flags, int integer);
 
 #endif

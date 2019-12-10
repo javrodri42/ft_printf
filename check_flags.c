@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 18:09:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/09 20:37:13 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/10 07:55:49 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ void	check_flags(const char *format, t_struct *flags)
 			flags->i++;
 			if (ft_strchr("*.-0123456789", format[flags->i]))		
 				parse_flags(format, flags);	
-				printf("flag2");			
+				//printf("flag2");			
 			if (ft_strchr("cspdiuxX%", format[flags->i]))			
 				check_type(format, flags);
-				printf("flag3");
+				//printf("flag3");
 		}
 		else
 		{
@@ -53,7 +53,7 @@ void	check_flags(const char *format, t_struct *flags)
 
 void	parse_flags(const char *format, t_struct *flags)
 {
-	printf("flag4");
+	//printf("flag4");
 	minus_zero_flag(format, flags);
 	width_flag(format, flags);
 	precision_flags(format, flags);
