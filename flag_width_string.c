@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string_flag_width.c                                :+:      :+:    :+:   */
+/*   flag_width_string.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 11:41:08 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 12:51:41 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 19:14:25 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	string_flag_width(t_struct flags, char *format)
+void	flag_widht_string(t_struct *flags, char *format)
 {
 	
 }

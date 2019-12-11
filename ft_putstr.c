@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_type.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/08 17:11:51 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 16:38:07 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/11 18:21:52 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/11 18:31:00 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <unistd.h>
 
-void	check_type(const char *format, t_struct *flags)
+void	ft_putchar(char c)
 {
-	if (format[flags->i] == 'd' || format[flags->i] == 'i')
-		type_integer(flags);
-	if (format[flags->i] == 's')
-		type_string(flags);
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }

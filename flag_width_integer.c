@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 18:54:37 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 17:53:08 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 15:32:29 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	flag_width_integer(t_struct *flags, int integer)
 			if ((flags->flag_integer_negative) && (flags->count < flags->precision))
 				flags->aux += 1;
 			if ((flags->aux) < flags->width)
-				integer_width_print(flags);	
+				print_integer_width(flags);	
 		}
 		else
 			while (flags->j < (flags->width - flags->count))
