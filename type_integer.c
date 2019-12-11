@@ -6,16 +6,15 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:21:27 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 18:26:12 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 12:53:19 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	integer_type(t_struct *flags)
+void	type_integer(t_struct *flags)
 {
 	int integer;
-	//printf("flag1");
 	flags->count = 0;
 	integer = 0;
 	integer = va_arg(flags->ap, int);

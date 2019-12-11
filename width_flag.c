@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 12:56:56 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 18:23:25 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 09:28:39 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	width_flag(const char *format, t_struct *flags)
 {
-	flags->i = 0;
+	flags->aux = 0;
 	flags->width = 0;
 	flags->flag_width = 0;
 	while (format[flags->i] == '*' || ft_isdigit(format[flags->i]))

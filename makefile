@@ -6,7 +6,7 @@
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/10 11:27:18 by javrodri         ###   ########.fr        #
+#    Updated: 2019/12/11 13:06:13 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS 		= ft_printf.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			check_type.c \
-			integer_type.c \
+			type_integer.c \
 			ft_itoa.c \
 			flag_width_integer.c \
 			print_negative.c \
@@ -32,7 +32,8 @@ SRCS 		= ft_printf.c \
 			integer_width_print.c \
 			flag_minus_integer.c \
 			flag_precision_integer.c \
-			number_print.c
+			number_print.c \
+			initialize_flags.c
 			 
 GCC			= @gcc -Wall -Wextra -Werror -c
 

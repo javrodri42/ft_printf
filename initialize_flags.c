@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minus_zero_flags.c                                 :+:      :+:    :+:   */
+/*   initialize_flags.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 11:41:20 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 09:30:14 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/11 13:37:30 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/11 13:37:46 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	minus_zero_flag(const char *format, t_struct *flags)
+void	initialize_flags(t_struct *flags)
 {
+
+	//if (!(flags = (t_struct *)malloc(sizeof(t_struct))))
+	//	return (-1);
+	flags->i = 0;
+	flags->j = 0;
+	flags->len = 0;
+	flags->aux = 0;
+	flags->count = 0;
 	flags->flag_minus = 0;
 	flags->flag_zero = 0;
-	while (format[flags->i] == '0' || format[flags->i] == '-')
-	{
-		if (format[flags->i] == '-')
-			flags->flag_minus = 1;
-		if (format[flags->i] == '0')
-			flags->flag_zero = 1;
-		if (flags->flag_minus == '1')
-			flags->flag_zero = 0;
-		flags->i++;
-	}
+	flags->flag_width = 0;
+	flags->width = 0;
+	flags->flag_precision = 0;
+	flags->precision = 0;
+	flags->flag_integer_negative = 0;	
 }

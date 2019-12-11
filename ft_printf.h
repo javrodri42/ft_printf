@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 10:42:10 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 13:13:17 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,15 @@ void	ft_putchar_fd(char c, int fd);
 void	check_type(const char *format, t_struct *flags);
 void	int_counter(t_struct *flags, int integer);
 void	flag_width_integer(t_struct *flags, int integer);
-void	integer_type(t_struct *flags);
+void	flag_minus_integer(t_struct *flags, int integer);
+void	flag_zero_integer(t_struct *flags);
+void	flag_precision_integer(t_struct *flags);
+void	type_integer(t_struct *flags);
 void	integer_width_print(t_struct *flags);
 int		print_negative(t_struct *flags, int integer);
-void	flag_zero_integer(t_struct *flags);
 char	*ft_itoa(int n);
-void	flag_precision_integer(t_struct *flags);
 void	number_print(t_struct *flags, int	integer);
-void	flag_minus_integer(t_struct *flags, int integer);
+void	string_type(t_struct *flags);
+void	string_flag_width(t_struct flags, char *str);
 
 #endif

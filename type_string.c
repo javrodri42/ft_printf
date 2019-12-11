@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minus_zero_flags.c                                 :+:      :+:    :+:   */
+/*   string_type.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 11:41:20 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 09:30:14 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/11 09:47:22 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/11 12:53:33 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	minus_zero_flag(const char *format, t_struct *flags)
+void	type_string(t_struct *flags)
 {
-	flags->flag_minus = 0;
-	flags->flag_zero = 0;
-	while (format[flags->i] == '0' || format[flags->i] == '-')
-	{
-		if (format[flags->i] == '-')
-			flags->flag_minus = 1;
-		if (format[flags->i] == '0')
-			flags->flag_zero = 1;
-		if (flags->flag_minus == '1')
-			flags->flag_zero = 0;
-		flags->i++;
-	}
+	char *str;
+
+	flags->count = 0;
+	str = va_arg(flags->ap, char *);
+	flags->count = ft_strlen(str);
+	if (flags->flag_width)
+		string_flag_width(flags, str);
 }

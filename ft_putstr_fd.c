@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 11:33:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/08 16:38:39 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 08:47:19 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 void	ft_putstr_fd(const char *str, int fd)
 {
-	while (str && *str)
+	int i;
+
+	i = 0;
+	if (str)
 	{
-		ft_putchar_fd(*str, fd);
-		str++;
+		while (str[i] != '\0')
+		{
+			write(fd, &str[i], 1);
+			i++;
+		}
 	}
 }

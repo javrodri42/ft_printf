@@ -6,13 +6,13 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 20:08:13 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/08 21:12:34 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 12:55:49 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	integer_width_print(t_struct *flags)
+void	print_integer_width(t_struct *flags)
 {
 	int total;
 

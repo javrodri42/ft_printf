@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minus_zero_flags.c                                 :+:      :+:    :+:   */
+/*   string_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 11:41:20 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 09:30:14 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/11 10:23:51 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/11 10:59:56 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <stdio.h>
 
-void	minus_zero_flag(const char *format, t_struct *flags)
+int	main(void)
 {
-	flags->flag_minus = 0;
-	flags->flag_zero = 0;
-	while (format[flags->i] == '0' || format[flags->i] == '-')
-	{
-		if (format[flags->i] == '-')
-			flags->flag_minus = 1;
-		if (format[flags->i] == '0')
-			flags->flag_zero = 1;
-		if (flags->flag_minus == '1')
-			flags->flag_zero = 0;
-		flags->i++;
-	}
+	char	*str = "1234567";
+
+	printf("%s", str);
+	printf("||");
+	printf("\n");
+	printf("%-2s", str);
+	printf("||");
+	printf("\n");
+	printf("%.4s", str);
+	printf("||");
+	printf("\n");
+	printf("%-9s", str);
+	printf("||");
+	printf("\n");
+	printf("%09s", str);
+	printf("||");
+	printf("\n");
 }

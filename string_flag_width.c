@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minus_zero_flags.c                                 :+:      :+:    :+:   */
+/*   string_flag_width.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/05 11:41:20 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 09:30:14 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/11 11:41:08 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/11 12:51:41 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	minus_zero_flag(const char *format, t_struct *flags)
+void	string_flag_width(t_struct flags, char *format)
 {
-	flags->flag_minus = 0;
-	flags->flag_zero = 0;
-	while (format[flags->i] == '0' || format[flags->i] == '-')
-	{
-		if (format[flags->i] == '-')
-			flags->flag_minus = 1;
-		if (format[flags->i] == '0')
-			flags->flag_zero = 1;
-		if (flags->flag_minus == '1')
-			flags->flag_zero = 0;
-		flags->i++;
-	}
+	
 }

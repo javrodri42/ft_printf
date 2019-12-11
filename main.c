@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 18:11:25 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/11 09:29:18 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,22 @@
 
 int main()
 {
-	printf("\n");
 	//printf("\n");
-    printf("Esto es una prueba %i \n", 42);
-    ft_printf("Esto es una prueba %i", 42);
+	//printf("\n");
+    //printf("Esto es una prueba %i \n", 42);
+    //ft_printf("Esto es una prueba %i", 42);
 	
 	//printf("\n");
-	printf("\n");
-	printf("\n");
+	//printf("\n");
+	//printf("\n");
 	printf("%i\n", -33);
 	ft_printf("%i", -33);
 	//printf("\n");
+	//printf("\n");
 	printf("\n");
+	printf("%.7i", 33);
 	printf("\n");
-	printf("%-7i\n", 33);
-	ft_printf("%-7i", 33);
+	ft_printf("%.7i", 33);
 	printf("\n");
 	//printf("%.*d",0 , 0);
     return 0;
