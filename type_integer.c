@@ -6,13 +6,13 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:21:27 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 18:01:11 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/16 16:29:50 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	type_integer(t_struct *flags)
+void	 type_integer(t_struct *flags)
 {
 	int integer;
 	flags->count = 0;

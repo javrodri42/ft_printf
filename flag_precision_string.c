@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   flag_precision_string.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 12:42:39 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/15 20:37:46 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/14 01:36:09 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/16 18:30:06 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_strchr(const char *s, int c)
+void	flag_precision_string(t_struct *flags)
 {
-	while (*s)
+	int aux;
+	aux = flags->precision < flags->count ? flags->precision : flags->count;
+	flags->j = 0;
+	//if (flags->precision < flags->count)
+		//flags->aux = flags->count;
+	while (flags->j < aux)
 	{
-		if (*s == c)
-			return ((char*)s);
-		++s;
+		//printf("flag_precision string");
+		write(1, &flags->ap[flags->j], 1);
+			//flags->len++;
+			flags->j++;
 	}
-	if (c == '\0')
-		return ((char*)s); 
-	return (0);
 }

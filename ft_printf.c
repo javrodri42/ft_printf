@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 08:30:26 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 13:36:59 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/16 19:02:01 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,19 @@ int	ft_printf(const char *format, ...)
 		ft_putstr_fd((char *)format, 1);
 		flags->len = ft_strlen(format);
 	}
+	/*printf("\n");
+	printf("-------------");
+	printf("\nwidth:%i", flags->width);
+	printf("\nprecision:%i", flags->precision);
+	printf("\ncount:%i", flags->count);
+	printf("\naux:%i", flags->aux);
+	printf("\nflag_precision:%i", flags->flag_precision);
+	printf("\nflag_width:%i", flags->flag_width);
+	printf("\nflag_minus:%i", flags->flag_minus);
+	printf("\nflag_zero:%i", flags->flag_zero);
+	printf("\nlen:%i", flags->len);
+	printf("\n");*/
+		
 	va_end(flags->ap);
 	return (flags->len);
 }

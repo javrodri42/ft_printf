@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 18:50:51 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/15 22:46:09 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	minus_zero_flag(const char *format, t_struct *flags);
 void	width_flag(const char *format, t_struct *flags);
 void	initialize_flags(t_struct *flags);
 char	*ft_strchr(const char *s, int c);
-size_t	ft_strlen(const char *s);
+int		ft_strlen(const char *s);
 void	precision_flags(const char *format, t_struct *flags);
 int		ft_isdigit(int c);
 void	ft_putstr_fd(const char *str, int fd);
@@ -63,5 +63,7 @@ void	print_string(t_struct *flags, char *str);
 void	print_string_width(t_struct *flags);
 void	flag_widht_string(t_struct *flags, char *format);
 void	ft_putstr(char *str);
+void	flag_minus_string(t_struct *flags);
+void	flag_precision_string(t_struct *flags);
 
 #endif

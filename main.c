@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 18:30:03 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/16 18:51:08 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@
 
 int main()
 {
+	
 	//printf("\n");
 	//printf("\n");
     //printf("Esto es una prueba %i \n", 42);
@@ -40,21 +41,43 @@ int main()
 	//printf("\n");
 	//printf("\n");
 	//printf("\n");
-	printf("%i\n", -33);
-	ft_printf("%i", -33);
+	//printf("%i\n", -33);
+	//ft_printf("%i", -33);
 	//printf("\n");
 	//printf("\n");
-	printf("\n");
-	printf("%.7i", 33);
-	printf("\n");
-	ft_printf("%.7i", 33);
-	printf("\n");
+	//printf("\n");
+	//printf("%.7i", 33);
+	//printf("\n");
+	//ft_printf("%.7i %4i", 33, 3);
+	//printf("\n");
 	//printf("%.*d",0 , 0);
-	ft_printf("%s||", "12345");
+	/*ft_printf("%s||", "12345");
 	printf("\n");
 	ft_printf("%09s||", "12345");
 	printf("\n");
 	ft_printf("%*s||", 9, "12345");
+	printf("\n");
+	ft_printf("%-*s||", 9, "abcdefg");
+	printf("\n");
+	ft_printf("%.3s||", "abcdefg");
+	printf("\n");
+	printf("%.3s||", "abcdefg");
+	printf("\n");
+	//ft_printf("%s||", 9, "12345");
+	printf("\n");
+	printf("%.7s", "hello");
+	printf("||");
+	printf("\n");*/
+	//printf("%.7s%.3s%.4s", "hello", "pollas", "miculo");
+	//printf("%8.1s|", "jelou");
+	printf("%.7s", "hello");
+	printf("\n");
+	ft_printf("%.7s", "hello");
+	
+	//printf("//");
+	
+	
+	//ft_printf("%s||", 9, "12345");
 	printf("\n");
     return 0;
 }

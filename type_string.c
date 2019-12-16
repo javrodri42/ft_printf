@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 09:47:22 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 19:18:38 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/16 18:43:02 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ void	type_string(t_struct *flags)
 	char *str;
 	flags->count = 0;
 	str = va_arg(flags->ap, char *);
+	if (!(str))
+		str = "(null)";
 	flags->count = ft_strlen(str);
-	//if (flags->flag_width)
-	//	flag_widht_string(flags, *integer);
-	//if (integer < 0)
-	//	integer = print_negative(flags, integer);
-	//if (flags->flag_zero)
-	//	flag_zero_integer(flags);
-	//if (flags->flag_precision)
-	//	flag_precision_integer(flags);
-	printf("%i", flags->count);
+	if (flags->flag_width && (!(flags->flag_minus)))
+		flag_widht_string(flags, str);
+	if (flags->flag_zero)
+		flag_zero_integer(flags);
+	if (flags->flag_precision)
+		flag_precision_string(flags);
+	//printf("%i", flags->precision);
 	print_string(flags, str);	
-	//if (flags->flag_minus)
-	//flag_minus_integer(flags, integer);	
+	if (flags->flag_minus)
+		flag_minus_string(flags);	
 }

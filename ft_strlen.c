@@ -6,15 +6,15 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 08:26:30 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/08 16:28:49 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/13 20:33:07 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-	size_t	counter;
+	int	counter;
 
 	counter = 0;
 	while (s[counter])

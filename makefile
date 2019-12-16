@@ -6,7 +6,7 @@
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/11 18:44:58 by javrodri         ###   ########.fr        #
+#    Updated: 2019/12/14 01:55:06 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,9 @@ SRCS 		= ft_printf.c \
 			type_string.c \
 			print_string_width.c \
 			flag_width_string.c \
-			ft_putstr.c
+			ft_putstr.c \
+			flag_minus_string.c \
+			flag_precision_string.c
 			 
 GCC			= @gcc -Wall -Wextra -Werror -c
 

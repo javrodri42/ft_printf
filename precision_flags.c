@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   precision_flags_integer.c                          :+:      :+:    :+:   */
+/*   precision_flags.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 16:49:57 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 08:56:01 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/16 16:38:31 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	precision_flags(const char *format, t_struct *flags)
 		flags->flag_zero = 0;
 		flags->flag_precision = 1;
 		flags->i++;
+		flags->aux = flags->count;
 		if (format[flags->i] == '*')
 		{
 			if ((flags->aux = va_arg(flags->ap, int)) >= 0)

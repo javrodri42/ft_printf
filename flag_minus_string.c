@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   flag_minus_string.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 12:42:39 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/15 20:37:46 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/14 00:34:04 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/16 13:10:21 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_strchr(const char *s, int c)
+void	flag_minus_string(t_struct *flags)
 {
-	while (*s)
+	flags->j = 0;
+	if (flags->flag_precision && flags->precision > flags->count)
 	{
-		if (*s == c)
-			return ((char*)s);
-		++s;
+		if ( flags->flag_integer_negative)
+			flags->precision += 1;
+		while (flags->j < (flags->width - flags->precision))
+		{
+			write(1," ", 1);
+			flags->len++;
+			flags->j++;
+		}
 	}
-	if (c == '\0')
-		return ((char*)s); 
-	return (0);
+	else
+	{
+		while (flags->j < (flags->width - flags->count))
+		{
+			write(1, " ", 1);
+			flags->len++;
+			flags->j++;
+		}
+	}
 }

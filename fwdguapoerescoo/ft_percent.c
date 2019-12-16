@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_percent.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fvega-tr <fvega-tr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 17:42:53 by fvega-tr          #+#    #+#             */
-/*   Updated: 2019/12/03 12:12:37 by fvega-tr         ###   ########.fr       */
+/*   Updated: 2019/12/15 21:09:30 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_percent(const char *s, t_struct *t)
 	while (s[t->i])
 	{
 		if (s[t->i] == '%')
+		printf("%");
 		{
 			t->i++;
 			if (ft_strchr("*.-0123456789", s[t->i]))
