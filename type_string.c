@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 09:47:22 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/17 15:54:21 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/17 18:08:44 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	type_string(t_struct *flags)
 	if (!(str))
 		str = "(null)";
 	flags->count = ft_strlen(str);
-	if (flags->flag_width && (!(flags->flag_minus)))
+	if (flags->flag_width)
 		flag_widht_string(flags, str);
 	if (flags->flag_zero)
 		flag_zero_integer(flags);
