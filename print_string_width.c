@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 15:41:40 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 18:57:38 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/17 16:33:36 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ void	print_string_width(t_struct *flags)
 	int total;
 	
 	flags->j = 0;
-	total = flags->width - flags->aux;
-	if  (flags->width == 0)
+	total = flags->width - flags->count;
 	{
 		while (flags->j < total)
 		{
@@ -36,11 +35,4 @@ void	print_string_width(t_struct *flags)
 			flags->j++;
 		}
 	}
-	while (flags->j < total)
-	{
-		write(1, " ", 1);
-		flags->len++;
-		flags->j++;
-	} 
-	
 }

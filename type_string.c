@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 09:47:22 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 18:43:02 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/17 15:54:21 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	type_string(t_struct *flags)
 	if (flags->flag_zero)
 		flag_zero_integer(flags);
 	if (flags->flag_precision)
-		flag_precision_string(flags);
+		flag_precision_string(flags, str);
 	//printf("%i", flags->precision);
 	print_string(flags, str);	
 	if (flags->flag_minus)

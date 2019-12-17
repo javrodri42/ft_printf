@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 18:51:08 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/17 16:32:24 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,17 @@ int main()
 	printf("\n");*/
 	//printf("%.7s%.3s%.4s", "hello", "pollas", "miculo");
 	//printf("%8.1s|", "jelou");
-	printf("%.7s", "hello");
+	printf("%%7.5s yolo");
 	printf("\n");
-	ft_printf("%.7s", "hello");
 	
+	printf("%7.5s", "yolo");
+	printf("\n");
+	ft_printf("%7.5s", "yolo");
+	printf("\n");
 	//printf("//");
 	
 	
 	//ft_printf("%s||", 9, "12345");
-	printf("\n");
+	
     return 0;
 }

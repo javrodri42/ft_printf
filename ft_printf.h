@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/15 22:46:09 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/17 15:53:08 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void	print_string_width(t_struct *flags);
 void	flag_widht_string(t_struct *flags, char *format);
 void	ft_putstr(char *str);
 void	flag_minus_string(t_struct *flags);
-void	flag_precision_string(t_struct *flags);
+void	flag_precision_string(t_struct *flags, char *str);
 
 #endif
