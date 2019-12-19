@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_negative.c                                   :+:      :+:    :+:   */
+/*   type_char.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/09 18:54:34 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/10 12:56:58 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/18 14:14:21 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/19 10:30:58 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		print_negative(t_struct *flags, int integer)
+void	type_char(t_struct *flags)
 {
-	write(1, "-", 1);
-	flags->len++;
-	integer *= -1;
-	return (integer);
+	char c;
+	
+	flags->j = 0;
+	c = (char)va_arg(flags->ap, int);
+	if ((flags->flag_width == 1) && (flags->flag_minus == 0))
+		while (flags->j < (flags->width - 1))
+			{
+				flags->len += write(1, " ", 1);
+					flags->j++;
+			}	
+	flags->len += write(1, &c, 1);
+	if (flags->flag_minus == 1)
+		while (flags->j < (flags->width - 1))
+			{
+				flags->len += write(1, " ", 1);
+				flags->j++;
+			}	
 }

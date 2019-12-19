@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 14:56:22 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/13 18:32:19 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/18 17:52:44 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int	main(void)
 {
-	printf("Hello World %*d", 5, 7);
+	//printf("Hello World %*d", 5, 7);
+	//printf("\n");
+	//printf("%*d", 5, 10);
 	printf("\n");
-	printf("%*d", 5, 10);
+	printf("%6c", 'r');
+	printf("\n");
 	return 0;
 	
 }

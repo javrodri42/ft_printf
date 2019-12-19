@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:11:51 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 16:41:50 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/19 10:40:27 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,8 @@ void	check_type(const char *format, t_struct *flags)
 		type_integer(flags);
 	if (format[flags->i] == 's')
 		type_string(flags);
+	if (format[flags->i] == 'c')
+		type_char(flags);
+	if (format[flags->i] == 'u')
+		type_unsigned_int(flags);
 }

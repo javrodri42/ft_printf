@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/14 01:55:06 by javrodri         ###   ########.fr        #
+#    Updated: 2019/12/19 11:03:52 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,10 @@ SRCS 		= ft_printf.c \
 			flag_width_string.c \
 			ft_putstr.c \
 			flag_minus_string.c \
-			flag_precision_string.c
+			flag_precision_string.c \
+			type_char.c \
+			ft_strdup.c \
+			type_unsigned_int.c
 			 
 GCC			= @gcc -Wall -Wextra -Werror -c
 

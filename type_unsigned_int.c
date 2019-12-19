@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   type_string.c                                      :+:      :+:    :+:   */
+/*   type_unsigned_int.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/11 09:47:22 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/18 14:19:48 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/19 10:41:34 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/19 11:03:39 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	type_string(t_struct *flags)
+void	type_unsigned_int(t_struct *flags)
 {
-	char *str;
+	unsigned int integer;
 	flags->count = 0;
-	str = va_arg(flags->ap, char *);
-	if (!(str))
-		str = "(null)";
-	flags->count = ft_strlen(str);
+	integer = 0;
+	integer = va_arg(flags->ap, unsigned int);
+	int_counter(flags, integer);
 	if (flags->flag_width)
-		flag_widht_string(flags, str);
+		flag_width_integer(flags, integer);
+	if (integer < 0)
+		integer = print_negative(flags, integer);
 	if (flags->flag_zero)
 		flag_zero_integer(flags);
 	if (flags->flag_precision)
-		flag_precision_string(flags, str);
-	print_string(flags, str);	
+		flag_precision_integer(flags);
+	number_print(flags, integer);
 	if (flags->flag_minus)
-		flag_minus_string(flags);	
+		flag_minus_integer(flags, integer);
+	
 }
