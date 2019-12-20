@@ -6,7 +6,7 @@
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/19 11:03:52 by javrodri         ###   ########.fr        #
+#    Updated: 2019/12/20 11:27:59 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,9 @@ SRCS 		= ft_printf.c \
 			flag_precision_string.c \
 			type_char.c \
 			ft_strdup.c \
-			type_unsigned_int.c
+			type_unsigned_int.c \
+			print_unsigned.c \
+			ft_itoa_unsigned.c
 			 
 GCC			= @gcc -Wall -Wextra -Werror -c
 

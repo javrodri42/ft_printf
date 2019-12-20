@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 10:41:34 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/19 11:03:39 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/20 11:26:17 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	type_unsigned_int(t_struct *flags)
 	flags->count = 0;
 	integer = 0;
 	integer = va_arg(flags->ap, unsigned int);
-	int_counter(flags, integer);
+	int_counter_unsigned(flags, integer);
 	if (flags->flag_width)
 		flag_width_integer(flags, integer);
 	if (integer < 0)
@@ -27,8 +27,18 @@ void	type_unsigned_int(t_struct *flags)
 		flag_zero_integer(flags);
 	if (flags->flag_precision)
 		flag_precision_integer(flags);
-	number_print(flags, integer);
+	print_unsigned(flags, integer);
 	if (flags->flag_minus)
-		flag_minus_integer(flags, integer);
-	
+		flag_minus_integer(flags, integer);	
+}
+
+void	int_counter_unsigned(t_struct *flags, unsigned int integer)
+{
+	char	*str;
+
+	flags->flag_integer_negative =  0;
+	str = ft_itoa_unsigned(integer);
+	flags->count = ft_strlen(str);
+	if (integer < 0)
+		flags->flag_integer_negative = 1;		
 }

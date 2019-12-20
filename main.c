@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/19 09:19:10 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/20 10:37:36 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
     //printf("Esto es una prueba %i \n", 42);
     //ft_printf("Esto es una prueba %i", 42);
 	
-	//printf("\n");
+	printf("\n");
 	//printf("\n");
 	//printf("\n");
 	//printf("%i\n", -33);
@@ -77,7 +77,7 @@ int main()
 	//printf("|");
 	printf("\n");
 	//printf("|");
-	ft_printf("%3c" );
+	ft_printf("%u", 4294967295u);
 	printf("|");
 		
 	printf("\n");

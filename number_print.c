@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 09:19:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 18:46:55 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/19 12:08:41 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ void	number_print(t_struct *flags, int	integer)
 		format = ft_itoa(integer);
 		while (format[flags->j] != '\0')
 		{
-			write(1, &format[flags->j], 1);
-			flags->len++;
+			flags->len += write(1, &format[flags->j], 1);
 			flags->j++;
 		}
 		free(format);

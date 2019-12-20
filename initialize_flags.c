@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 13:37:30 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 13:37:46 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/20 11:05:09 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	initialize_flags(t_struct *flags)
 {
-
-	//if (!(flags = (t_struct *)malloc(sizeof(t_struct))))
-	//	return (-1);
 	flags->i = 0;
 	flags->j = 0;
 	flags->len = 0;

@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 08:30:26 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/19 08:58:26 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/20 11:26:07 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_printf(const char *format, ...)
 	t_struct	*flags;
 
 	if (!(flags = (t_struct *)malloc(sizeof(t_struct))))
-		return (-1);
+		return (0);
 	initialize_flags(flags);
 	if (format == NULL)
 		return (-1);
