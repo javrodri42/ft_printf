@@ -1,27 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   pruebass.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/11 18:21:52 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 12:55:25 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/23 12:27:11 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/23 12:45:45 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "ft_printf.h"
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+unsigned int	hexa_count_len(unsigned int hexa);
+
+int main(void)
 {
-	int i;
+	unsigned int hexa;
+	
+	hexa = 3267;
+	printf("%u\n", hexa_count_len(hexa));
+	return (0);
+}
 
-	i = 0;
 
-	while (str[i])
+
+
+unsigned int	hexa_count_len(unsigned int hexa)
+{
+	int count;
+	int temp;
+
+	temp = 0;
+	count = 0;
+	while(hexa >= 16)
 	{
-		ft_putchar(str[i]);
-		i++;
+		hexa = hexa / 16;
+		count++;
 	}
+	count++;
+	return(count);
+	
 }

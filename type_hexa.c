@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   type_unsigned_int.c                                :+:      :+:    :+:   */
+/*   type_hexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/19 10:41:34 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/20 19:28:30 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/23 10:36:22 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/23 13:16:17 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	type_unsigned_int(t_struct *flags)
+void	type_hexa_low(t_struct *flags)
 {
-	unsigned int integer;
+	unsigned int hexa;
 	flags->count = 0;
-	integer = 0;
-	integer = va_arg(flags->ap, unsigned int);
-	int_counter_unsigned(flags, integer);
+	hexa = 0;
+	hexa = va_arg(flags->ap, unsigned int);
+	hexa_countdigits(flags, hexa);
 	if (flags->flag_width)
-		flag_width_integer(flags, integer);
-	if (integer < 0)
-		integer = print_negative(flags, integer);
+		flag_width_integer(flags, hexa);
+	if (hexa < 0)
+		hexa = print_negative(flags, hexa);
 	if (flags->flag_zero)
 		flag_zero_integer(flags);
 	if (flags->flag_precision)
 		flag_precision_integer(flags);
-	print_unsigned(flags, integer);
+	print_hexa_low(flags, hexa);
 	if (flags->flag_minus)
-		flag_minus_integer(flags, integer);	
+		flag_minus_integer(flags, hexa);	
 }
 
-void	int_counter_unsigned(t_struct *flags, unsigned int integer)
+void	print_hexa_low(t_struct *flags, unsigned int hexa)
 {
-	char	*str;
-
-	flags->flag_integer_negative =  0;
-	str = ft_itoa_unsigned(integer);
-	flags->count = ft_strlen(str);
-	if (integer < 0)
-		flags->flag_integer_negative = 1;		
+	if (hexa != 0)
+	{
+		print_hexa_low(flags, hexa / 16);
+		if (hexa % 16 >= 10)
+			ft_putchar('a' + (hexa % 16 %10));
+		else
+			ft_putchar('0' + hexa % 16);		
+	}
 }

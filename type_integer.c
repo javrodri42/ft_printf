@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:21:27 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 16:29:50 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/20 19:38:26 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ void	 type_integer(t_struct *flags)
 	if (flags->flag_minus)
 		flag_minus_integer(flags, integer);	
 }
+

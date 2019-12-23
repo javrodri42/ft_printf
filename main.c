@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/20 10:37:36 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/23 13:05:30 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ int main()
 	//printf("%3c");
 	//printf("|");
 	printf("\n");
-	//printf("|");
-	ft_printf("%u", 4294967295u);
+	printf("|");
+	ft_printf("%5.x", 3267);
 	printf("|");
 		
 	printf("\n");

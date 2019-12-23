@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 18:09:15 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/15 21:16:35 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/23 13:00:10 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	check_flags(const char *format, t_struct *flags)
 	{
 		if (format[flags->i] == '%')				
 		{
-			//printf("|");
 			flags->i++;
 			if (ft_strchr("*.-0123456789", format[flags->i]))		
 				parse_flags(format, flags);	

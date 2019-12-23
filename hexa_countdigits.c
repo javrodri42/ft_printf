@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_type.c                                       :+:      :+:    :+:   */
+/*   hexa_countdigits.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/08 17:11:51 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 13:06:02 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/23 12:57:21 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/23 12:57:54 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	check_type(const char *format, t_struct *flags)
+void	hexa_countdigits(t_struct *flags, unsigned int hexa)
 {
-	if (format[flags->i] == 'd' || format[flags->i] == 'i')
-		type_integer(flags);
-	if (format[flags->i] == 's')
-		type_string(flags);
-	if (format[flags->i] == 'c')
-		type_char(flags);
-	if (format[flags->i] == 'u')
-		type_unsigned_int(flags);
-	if (format[flags->i] == 'x')
-		type_hexa_low(flags);
-	//if (format[flags->i] == 'X')
-	//	type_hexa_upper(flags);
+	flags->count = 0;
+		
+	while(hexa >= 16)
+	{
+		hexa = hexa / 16;
+		flags->count++;
+	}
+	flags->count++;	
 }

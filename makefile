@@ -6,7 +6,7 @@
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/20 11:27:59 by javrodri         ###   ########.fr        #
+#    Updated: 2019/12/23 13:17:25 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,10 @@ SRCS 		= ft_printf.c \
 			ft_strdup.c \
 			type_unsigned_int.c \
 			print_unsigned.c \
-			ft_itoa_unsigned.c
+			ft_itoa_unsigned.c \
+			type_hexa.c \
+			ft_putchar.c \
+			hexa_countdigits.c
 			 
 GCC			= @gcc -Wall -Wextra -Werror -c
 

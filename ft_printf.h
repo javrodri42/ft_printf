@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/20 11:10:42 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/23 13:06:25 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,13 @@ void	type_unsigned_int(t_struct *flags);
 void	print_unsigned(t_struct *flags, unsigned int unsign);
 void	int_counter_unsigned(t_struct *flags, unsigned int integer);
 char	*ft_itoa_unsigned(unsigned int n);
+void	type_hexa_low(t_struct *flags);
+void	type_hexa_upper(t_struct *flags);
+void	print_hexa(t_struct *flags, unsigned int hexa);
+void	ft_hexad_upper(unsigned int c, t_struct *f);
+void	ft_putchar(char c);
+void	hexa_countdigits(t_struct *flags, unsigned int hexa);
+void	print_hexa_low(t_struct *flags, unsigned int hexa);
+void	print_hexa_upper(t_struct *flags, unsigned int hexa);
 
 #endif
