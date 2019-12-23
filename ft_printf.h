@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 13:06:25 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/23 17:39:00 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,8 @@ void	ft_putchar(char c);
 void	hexa_countdigits(t_struct *flags, unsigned int hexa);
 void	print_hexa_low(t_struct *flags, unsigned int hexa);
 void	print_hexa_upper(t_struct *flags, unsigned int hexa);
+void	hexa_zero(t_struct *flags, unsigned int hexa);
+void	type_percent(t_struct *flags);
+void	print_percent(t_struct *flags, unsigned long percent);
 
 #endif
