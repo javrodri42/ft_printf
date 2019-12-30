@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 17:39:00 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/30 19:57:03 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ void	ft_putstr_fd(const char *str, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	check_type(const char *format, t_struct *flags);
 void	int_counter(t_struct *flags, int integer);
-void	flag_width_integer(t_struct *flags, int integer);
+void	flag_width_integer(t_struct *flags, long int integer);
 void	flag_minus_integer(t_struct *flags, int integer);
 void	flag_zero_integer(t_struct *flags);
 void	flag_precision_integer(t_struct *flags);
 void	type_integer(t_struct *flags);
 void	print_integer_width(t_struct *flags);
-int		print_negative(t_struct *flags, int integer);
+int		print_negative(t_struct *flags, long int integer);
 char	*ft_itoa(int n);
 void	number_print(t_struct *flags, int	integer);
 void	type_string(t_struct *flags);
@@ -82,5 +82,14 @@ void	print_hexa_upper(t_struct *flags, unsigned int hexa);
 void	hexa_zero(t_struct *flags, unsigned int hexa);
 void	type_percent(t_struct *flags);
 void	print_percent(t_struct *flags, unsigned long percent);
+void	type_pointer(t_struct *flags);
+void	print_pointer(t_struct *flags, unsigned long hexa);
+void	flag_zero_percent(t_struct *flags);
+void	flag_width_pointer(t_struct *flags, int integer);
+void	flag_precision_pointer(t_struct *flags);
+void	print_pointer_width(t_struct *flags);
+void	pointer_countdigits(t_struct *flags, unsigned long hexa);
+void	flag_minus_pointer(t_struct *flags, int integer);
 
 #endif
+ 

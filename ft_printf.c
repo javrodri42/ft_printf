@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 08:30:26 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 18:29:58 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/30 19:54:22 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_printf(const char *format, ...)
 	printf("|------------|");
 	printf("\n");
 	//printf("%X", flags->ap);
-	//printf("\n");	
+	//printf\n");	
 	*/
 	va_end(flags->ap);
 	return (flags->len);

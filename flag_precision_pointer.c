@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flag_minus_integer.c                               :+:      :+:    :+:   */
+/*   flag_precision_pointer.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/10 09:33:26 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/30 19:38:39 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/30 15:53:04 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/30 19:26:00 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	flag_minus_integer(t_struct *flags, int integer)
+void	flag_precision_pointer(t_struct *flags)
 {
+	int aux;
+
+	aux = flags->count;
 	flags->j = 0;
-	if (flags->flag_precision && flags->precision > flags->count)
+	if (flags->flag_integer_negative)
+		aux -= 1;
+	if (flags->precision >aux)
 	{
-		if ( flags->flag_integer_negative)
-			flags->precision += 1;
-		while (flags->j < (flags->width - flags->precision))
+		while (flags->j < (flags->precision - aux))
 		{
-			write(1," ", 1);
-			flags->len++;
-			flags->j++;
-		}
-	}
-	else
-	{
-		if (integer == 0 && flags->precision == 0 && flags->flag_precision)
-			flags->count = 0;
-		while (flags->j < (flags->width - flags->count))
-		{
-			write(1, " ", 1);
+			write(1, "0", 1);
 			flags->len++;
 			flags->j++;
 		}

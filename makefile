@@ -6,7 +6,7 @@
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/23 17:26:45 by javrodri         ###   ########.fr        #
+#    Updated: 2019/12/30 19:39:27 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,15 +49,26 @@ SRCS 		= ft_printf.c \
 			type_hexa.c \
 			ft_putchar.c \
 			hexa_countdigits.c \
-			type_percent.c
-			 
-GCC			= @gcc -Wall -Wextra -Werror -c
+			type_percent.c \
+			type_pointer.c \
+			flag_zero_percent.c \
+			flag_width_pointer.c \
+			flag_precision_pointer.c \
+			print_pointer_width.c \
+			pointer_countdigits.c \
+			flag_minus_pointer.c
+	#		main.c
+					 
+GCC			= @gcc -Wall -Wextra -Werror -g
 
 OBJS 		= $(SRCS:.c=.o)
 
 INCLUDES 	= ./
 
 all: $(NAME)
+			
+#$(NAME) :
+#			$(GCC) $(SRCS) ft_printf.h
 
 $(NAME) : $(SRCS) ft_printf.h
 			$(GCC) -I$(INCLUDES) -c $(SRCS)

@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 09:46:33 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 17:38:02 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/30 19:50:31 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,13 @@ int main()
 	//printf("%%7.5s, bombastic");
 	//printf("\n");
 	//printf("|");
-	printf("%5%");
+	int a = -2147483648;
+	printf("%.6d", -3);
 	printf("|");
 	printf("\n");
 	printf("|");
-	ft_printf("%5%");
+	ft_printf("%.6d", -3);
+	//printf("|");
 		
 	printf("\n");
 	printf("\n");
@@ -87,4 +89,4 @@ int main()
 	//ft_printf("%s||", 9, "12345");
 	
     return 0;
-}
+}	

@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_negative.c                                   :+:      :+:    :+:   */
+/*   pointer_countdigits.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/09 18:54:34 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/30 19:51:09 by javrodri         ###   ########.fr       */
+/*   Created: 2019/12/30 19:28:42 by javrodri          #+#    #+#             */
+/*   Updated: 2019/12/30 19:28:55 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		print_negative(t_struct *flags, long int integer)
+void	pointer_countdigits(t_struct *flags, unsigned long hexa)
 {
-	write(1, "-", 1);
-	flags->len++;
-	integer *= -1;
-	return (integer);
+	flags->count = 0;
+	while(hexa >= 16)
+	{
+		hexa = hexa / 16;
+		flags->count++;
+	}
+	flags->count++;	
 }

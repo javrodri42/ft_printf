@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:11:51 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 17:23:49 by javrodri         ###   ########.fr       */
+/*   Updated: 2019/12/30 11:36:42 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ void	check_type(const char *format, t_struct *flags)
 		type_hexa_upper(flags);
 	if (format[flags->i] == '%')
 		type_percent(flags);
+	if (format[flags->i] == 'p')
+		type_pointer(flags);
 }
