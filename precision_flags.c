@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 16:49:57 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 16:38:31 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/02 19:39:43 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	precision_flags(const char *format, t_struct *flags)
 		if (format[flags->i] == '*')
 		{
 			if ((flags->aux = va_arg(flags->ap, int)) >= 0)
-				flags->precision = flags->aux;
-			flags->i++;
+				flags->precision = flags->aux;			
+			flags->i++;								
 		}
 		else if (ft_isdigit(format[flags->i]))
 		{

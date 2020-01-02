@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flag_zero_integer.c                                :+:      :+:    :+:   */
+/*   flag_minus_percent.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/09 19:02:59 by javrodri          #+#    #+#             */
-/*   Updated: 2020/01/02 20:23:57 by javrodri         ###   ########.fr       */
+/*   Created: 2020/01/02 16:33:34 by javrodri          #+#    #+#             */
+/*   Updated: 2020/01/02 16:34:27 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	flag_zero_integer(t_struct *flags)
+void	flag_minus_percent(t_struct *flags)
 {
 	flags->j = 0;
-	if ((flags->flag_width) && (flags->width > flags->count))
+	if (flags->flag_precision && flags->precision > flags->count)
+	{
+		if (flags->flag_integer_negative)
+			flags->precision += 1;
+		while (flags->j < (flags->width - flags->precision))
+		{
+			write(1, " ", 1);
+			flags->len++;
+			flags->j++;
+		}
+	}
+	else
 	{
 		while (flags->j < (flags->width - flags->count))
 		{
-			write(1, "0", 1);
+			write(1, " ", 1);
 			flags->len++;
 			flags->j++;
 		}

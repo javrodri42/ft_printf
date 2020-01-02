@@ -6,7 +6,7 @@
 #    By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 08:29:56 by javrodri          #+#    #+#              #
-#    Updated: 2019/12/30 19:39:27 by javrodri         ###   ########.fr        #
+#    Updated: 2020/01/02 16:38:03 by javrodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRCS 		= ft_printf.c \
 			flag_precision_pointer.c \
 			print_pointer_width.c \
 			pointer_countdigits.c \
-			flag_minus_pointer.c
+			flag_minus_pointer.c \
+			flag_minus_percent.c
 	#		main.c
 					 
 GCC			= @gcc -Wall -Wextra -Werror -g

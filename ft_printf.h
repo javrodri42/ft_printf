@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 15:08:11 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/30 19:57:03 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/02 16:27:38 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void	flag_precision_pointer(t_struct *flags);
 void	print_pointer_width(t_struct *flags);
 void	pointer_countdigits(t_struct *flags, unsigned long hexa);
 void	flag_minus_pointer(t_struct *flags, int integer);
+void	flag_minus_percent(t_struct *flags);
 
 #endif
  

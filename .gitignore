@@ -3,3 +3,6 @@ pft_2019/
 *.out
 fwdguapo*
 pft_2019/
+ft_printf_destroyer/
+ft_printf_destroyer*
+printf-unit-test/

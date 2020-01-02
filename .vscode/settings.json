@@ -1,6 +1,10 @@
 {
 	"files.associations": {
 		"ft_printf.h": "c",
-		"stdarg.h": "c"
+		"stdarg.h": "c",
+		"sstream": "c",
+		"chrono": "c",
+		"map": "c",
+		"unordered_map": "c"
 	}
 }
