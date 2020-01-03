@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 13:37:30 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/20 11:05:09 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:30:19 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	initialize_flags(t_struct *flags)
 	flags->width = 0;
 	flags->flag_precision = 0;
 	flags->precision = 0;
-	flags->flag_integer_negative = 0;	
+	flags->flag_integer_negative = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 19:28:42 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/30 19:28:55 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:34:20 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	pointer_countdigits(t_struct *flags, unsigned long hexa)
 {
 	flags->count = 0;
-	while(hexa >= 16)
+	while (hexa >= 16)
 	{
 		hexa = hexa / 16;
 		flags->count++;
 	}
-	flags->count++;	
+	flags->count++;
 }

@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 12:56:56 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/16 15:54:47 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:52:53 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	width_flag(const char *format, t_struct *flags)
 	{
 		if (format[flags->i] == '*')
 		{
-			flags->aux = va_arg(flags->ap, int);							
+			flags->aux = va_arg(flags->ap, int);
 			flags->flag_minus = flags->aux < 0 ? 1 : flags->flag_minus;
 			flags->width = flags->aux < 0 ? -(flags->aux) : flags->aux;
 			flags->flag_width = 1;
@@ -37,13 +37,5 @@ void	width_flag(const char *format, t_struct *flags)
 				flags->i++;
 			}
 		}
-	} 
+	}
 }
-
-/*
-**La especificación de ancho nunca provoca el truncamiento de un valor. 
-**Si el número de caracteres del valor de salida es mayor que el ancho especificado, 
-**o si el argumento width no se proporciona, todos los caracteres del valor son de salida, 
-**de acuerdo con la especificación del argumento precision.
-*/
-

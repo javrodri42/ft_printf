@@ -6,15 +6,16 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 17:21:27 by javrodri          #+#    #+#             */
-/*   Updated: 2020/01/02 20:38:41 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:45:44 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	 type_integer(t_struct *flags)
+void	type_integer(t_struct *flags)
 {
 	int integer;
+
 	flags->count = 0;
 	integer = 0;
 	integer = va_arg(flags->ap, int);
@@ -33,6 +34,5 @@ void	 type_integer(t_struct *flags)
 		flag_precision_integer(flags);
 	number_print(flags, integer);
 	if (flags->flag_minus)
-		flag_minus_integer(flags, integer);	
+		flag_minus_integer(flags, integer);
 }
-

@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 20:08:13 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/11 19:12:51 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:35:31 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	print_integer_width(t_struct *flags)
 		write(1, " ", 1);
 		flags->len++;
 		flags->j++;
-	} 
+	}
 }

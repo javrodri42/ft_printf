@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/23 10:36:22 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/23 17:18:30 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:44:36 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	type_hexa_low(t_struct *flags)
 {
 	unsigned int hexa;
+
 	flags->count = 0;
 	hexa = 0;
 	hexa = va_arg(flags->ap, unsigned int);
@@ -31,12 +32,13 @@ void	type_hexa_low(t_struct *flags)
 		hexa_zero(flags, hexa);
 	print_hexa_low(flags, hexa);
 	if (flags->flag_minus)
-		flag_minus_integer(flags, hexa);	
+		flag_minus_integer(flags, hexa);
 }
 
 void	type_hexa_upper(t_struct *flags)
 {
 	unsigned int hexa;
+
 	flags->count = 0;
 	hexa = 0;
 	hexa = va_arg(flags->ap, unsigned int);
@@ -53,7 +55,7 @@ void	type_hexa_upper(t_struct *flags)
 		hexa_zero(flags, hexa);
 	print_hexa_upper(flags, hexa);
 	if (flags->flag_minus)
-		flag_minus_integer(flags, hexa);	
+		flag_minus_integer(flags, hexa);
 }
 
 void	print_hexa_low(t_struct *flags, unsigned int hexa)
@@ -63,14 +65,14 @@ void	print_hexa_low(t_struct *flags, unsigned int hexa)
 		print_hexa_low(flags, hexa / 16);
 		if (hexa % 16 >= 10)
 		{
-			ft_putchar('a' + (hexa % 16 %10));
+			ft_putchar('a' + (hexa % 16 % 10));
 			flags->len++;
 		}
 		else
 		{
 			ft_putchar('0' + hexa % 16);
 			flags->len++;
-		}		
+		}
 	}
 }
 
@@ -81,14 +83,14 @@ void	print_hexa_upper(t_struct *flags, unsigned int hexa)
 		print_hexa_upper(flags, hexa / 16);
 		if (hexa % 16 >= 10)
 		{
-			ft_putchar('A' + (hexa % 16 %10));
+			ft_putchar('A' + (hexa % 16 % 10));
 			flags->len++;
-		}	
+		}
 		else
 		{
 			ft_putchar('0' + hexa % 16);
 			flags->len++;
-		}			
+		}
 	}
 }
 

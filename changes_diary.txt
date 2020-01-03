@@ -1,3 +1,0 @@
-3-12
-*Añadida la estructura para la funcion que comprueba los flags.
-*Funcion principal compila y se detiene al localizar un simbolo %.

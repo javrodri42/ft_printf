@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:42:39 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/15 20:37:46 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:28:30 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ char	*ft_strchr(const char *s, int c)
 		++s;
 	}
 	if (c == '\0')
-		return ((char*)s); 
+		return ((char*)s);
 	return (0);
 }

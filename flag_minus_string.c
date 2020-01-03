@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/14 00:34:04 by javrodri          #+#    #+#             */
-/*   Updated: 2019/12/17 17:56:42 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/01/03 16:28:04 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	flag_minus_string(t_struct *flags)
 	{
 		while (flags->j < (flags->width - flags->precision))
 		{
-			write(1," ", 1);
+			write(1, " ", 1);
 			flags->len++;
 			flags->j++;
 		}
